@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jacquard+24&family=Jersey+10&family=Jersey+10+Charted&family=Noto+Sans+Devanagari:wght@100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .main-container {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .head-card {
+      height: 35vh;
+      width: 36vh;
+      background-color: hsl(216, 12%, 8%);
+      border-radius: 20px;
+      scale: 1.7;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .display {
+      width: 100%;
+      height: 20%;
+    }
+
+    .star {
+      position: relative;
+    }
+
+    .star-svg {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      padding: 5px;
+      background-color: hsl(213, 19%, 18%);
+      border-radius: 50px;
+      scale: 0.9;
+    }
+
+    .display.para1 {
+      height: 10%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+    }
+
+    .display.para1 h2 {
+      padding-left: 15px;
+    }
+
+    .para2 {
+      text-justify: distribute-all-lines;
+      font-size: 0.7rem;
+      color: hsl(216, 12%, 54%);
+
+    }
+
+    .display.para2 span {
+      display: block;
+      padding-top: 10px;
+      padding-left: 15px;
+      font-family: "Overpass";
+    }
+
+    .display.rating-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .rate {
+      width: 20%;
+      scale: 0.6;
+      background-color: hsl(213, 19%, 18%);
+      border-radius: 30px;
+      border: 1px solid hsl(213, 19%, 18%);
+      color: white;
+    }
+
+    .rate:hover {
+      cursor: pointer;
+      background-color: hsl(25, 97%, 53%)
+    }
+
+    .rate.after {
+      background-color: hsl(217, 12%, 63%);
+    }
+
+    .display.submit {
+      align-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      /* grid-template-columns:100%;
+      grid-template-rows: 100%; */
+      justify-content: center;
+      place-items: center;
+      align-self: center
+    }
+
+    button.submit {
+      margin-left: auto;
+      margin-right: auto;
+      width: 86%;
+      height: 3em;
+      border-radius: 25px;
+      letter-spacing: 1.7px;
+      color: hsl(25, 97%, 53%);
+      font-size: 10px;
+    }
+
+    @media screen and (max-width:975px) {
+      .head-card {
+        height: 45vh;
+        width: 90vw;
+        background-color: hsl(216, 12%, 8%);
+        border-radius: 20px;
+        scale:1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .display.rating-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+      .rate {
+      width: 30%;
+      scale: 0.7;
+      background-color: hsl(213, 19%, 18%);
+      border-radius: 40px;
+      border: 1px solid hsl(213, 19%, 18%);
+      color: white;
+    }
+    .para2 {
+      
+      font-size: 1rem;
+      color: hsl(216, 12%, 54%);
+
+    }
+    .display.para2 span {
+      text-align:left;
+      /* display: block; */
+      padding-top: 10px;
+      padding-left: 15px;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="head-card">
+      <div class="display star">
+        <span>
+          <svg class="star-svg" width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z"
+              fill="#FC7614" />
+          </svg></span>
+      </div>
+      <div class="display para1">
+        <h2>How did we do?</h2>
+      </div>
+      <div class="display para2"><span>Please let us know how we did with your support request.All feedback is
+          appriciated to
+          help us improve our offering!</span></div>
+      <div class="display rating-btns">
+        <button class="rate">1</button>
+        <button class="rate">2</button>
+        <button class="rate">3</button>
+        <button class="rate">4</button>
+        <button class="rate">5</button>
+      </div>
+      <div class="display submit">
+        <button class="submit">SUBMIT</button>
+      </div>
+
+
+
+
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          let rate = {
+            rvalue: '',
+          }
+          console.log("hey");
+          rate.rvalue = 0;
+          console.log(rate.rvalue);
+          let ratingvalue = document.querySelectorAll('.rate');
+          ratingvalue.forEach(buttons => {
+            buttons.addEventListener('click', () => {
+              ratingvalue.forEach(btn => btn.classList.remove(`after`));
+              console.log(ratingvalue.innerHTML);
+              buttons.classList.add(`rate`, `after`);
+              rate.rvalue = buttons.innerHTML;
+              console.log(rate);
+              console.log(rate);
+              localStorage.setItem('rate', JSON.stringify(rate));
+            });
+          });
+
+          let submitbtn = document.querySelector('.submit');
+          submitbtn.addEventListener('click', function () {
+            console.log(rate.rvalue);
+            if (rate.rvalue === 0) {
+              submitbtn.disabled = true;
+            }
+            else {
+              const targetUrl = 'Thank-you.html';
+              window.location.href = targetUrl;
+            }
+          })
+
+        })
+      </script>
+    </div>
+</body>
+
+</html>
