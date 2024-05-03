@@ -276,6 +276,12 @@
           console.log('checking');
           document.querySelector('.Errorlabeldate').innerHTML = `Must be a valid Date`
         }
+        if (Number(this.value) === 4 && user_date > 30 || Number(this.value) === 6 && user_date > 30 ||Number(this.value) === 9 && user_date > 30 ||Number(this.value) === 11 && user_date > 30 ) {
+          console.log('checking');
+          document.querySelector('.Errorlabeldate').innerHTML = `Must be a valid Date`
+        }else{
+          document.querySelector('.Errorlabeldate').innerHTML = ``
+        }
         // else {
         //   document.querySelector('.Errorlabeldate').innerHTML = `Must be a valid Date`
         // }
