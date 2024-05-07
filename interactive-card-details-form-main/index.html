@@ -23,11 +23,13 @@
       flex-direction: row;
     }
 
+    
     .main-container-1 {
       width: 30%;
       height: 100vh;
       background-color: rgb(31, 255, 31);
       overflow-y: hidden;
+      z-index: 2;
       /* overflow-x: visible; */
     }
 
@@ -155,6 +157,7 @@
       font-size: 0.8rem;
       font-weight: bolder;
       letter-spacing: 0.1rem;
+      /* z-index:1; */
     }
 
     .form {
@@ -165,7 +168,51 @@
       flex-direction: column;
       gap: 15px;
     }
+    .thankyou{
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0px;
+      left: 0px;
+      z-index:1;
+      display:none;
+      flex-direction: column;
+      align-items: center;
+    }
+    .thankyou .content{
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* background-color: blue; */
+      position:absolute;
+      right:25%;
+      top:25%;
+      gap:25px;
 
+    }
+    .thankyou .content .span1{
+      font-size: 2rem;
+      font-family:"Space Grotesk", sans-serif;
+    }
+    .thankyou .content .span2{
+      font-size: 1.2rem;
+      font-family:"Space Grotesk", sans-serif;
+      color:hsl(279, 6%, 55%)
+    }
+    .thankyou .content .confirm{
+      margin-top: 20px;
+      width: 130%;
+      height:3rem;
+      background-color: rgb(0, 0, 0);
+      color:white;
+      letter-spacing: 0.2rem;
+      border-radius: 10px;
+    }
+    
     .user-input {
       height: 2rem;
       border-radius: 10px;
@@ -233,6 +280,177 @@
       color: red;
       font-size: 0.7rem;
     }
+
+
+
+    @media screen and (max-width:600px) {
+      body{
+        display: flex;
+        flex-direction: column;
+      }
+      .main-container-1 {
+      width: 100vw;
+      height: 30vh;
+      background-color: rgb(31, 255, 31);
+      z-index: 2;
+      /* overflow-x: visible; */
+    }
+    .bg-main-desktop {
+      height: 30vh;
+      width: 100vw;
+    }
+    .main-container-2 {
+      width: 100%;
+      height: 70vh;
+      /* background-color: green; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bg-card-front {
+      position: absolute;
+      top:125px;
+      left:-50px;
+      scale: 0.7;
+      z-index: 3;
+      margin: 0;
+    }
+
+    .show-card-number {
+      position: absolute;
+      top: 20%;
+      left: 12%;
+      width: 40px;
+      height: 40px;
+      background-color: rgb(255, 255, 255);
+      z-index: 4;
+      border-radius: 100px;
+    }
+
+    .show-card-number2 {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      width: 40px;
+      height: 40px;
+      z-index: 4;
+      border: 2px solid white;
+      border-radius: 100px;
+      scale: 0.5;
+    }
+
+    .show-card-number3 {
+      position: absolute;
+      top: 27%;
+      left: 7%;
+      width: 300px;
+      height: 40px;
+      z-index: 4;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 1.4rem;
+      letter-spacing: 0.1rem;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .show-card-number4 {
+      position: absolute;
+      top: 35%;
+      left: 10%;
+      width: 120px;
+      height: 30px;
+      z-index: 4;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      letter-spacing: 0.2rem;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .show-card-number5 {
+      position: absolute;
+      top: 35%;
+      left: 60%;
+      width: 60px;
+      height: 30px;
+      z-index: 4;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+
+    .bg-card-back {
+      position: absolute;
+      z-index: 2;
+      top: 0%;
+      left: 0%;
+      scale: 0.7;
+      
+    }
+
+    .show-cvv {
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      top: 6%;
+      left: 65%;
+      z-index: 4;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .card-detail-form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8rem;
+      font-weight: bolder;
+      letter-spacing: 0.1rem;
+      /* z-index:1; */
+    }
+
+    .form {
+      width: 90%;
+      height: auto;
+      /* background-color: aqua; */
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .thankyou{
+      background-color: rgb(255, 255, 255);
+      width: 115%;
+      height: 100%;
+      position: absolute;
+      top:160px;
+      left:0px;
+      z-index:1;
+      display:none;
+      flex-direction: column;
+      align-items: center;
+    }
+    .thankyou .content .confirm{
+      margin-top: 20px;
+      width: 100%;
+      height:3rem;
+      background-color: rgb(0, 0, 0);
+      color:white;
+      letter-spacing: 0.2rem;
+      border-radius: 10px;
+    }
+
+  } 
   </style>
 </head>
 
@@ -250,7 +468,15 @@
   <img class="bg-card-back" src="images/bg-card-back.png" alt="">
   <div class="show-cvv">000</div>
   <div class="main-container-2">
-    <form action="" class="card-detail-form" name="card-detail-form" method="post" onsubmit="return validateform()">
+    <div class="thankyou">
+      <div class="content">
+      <svg class="complete-sign" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+      <span class="span1">THANK YOU</span>
+      <span class="span2">We've added your card details</span>
+      <button class="confirm">CONFIRM</button>
+    </div>
+    </div>
+    <form action="" class="card-detail-form" name="card-detail-form" method="post">
       <div class="form">
         <label for="cardholder-name">CARDHOLDER NAME</label>
         <input class="user-input" id="cardholder-name" name="cardholder-name" type="text"
@@ -274,7 +500,7 @@
             <label class="error mmyy" style="width:50%"> </label>
           </div>
         </div>
-        <input class="submit-btn" type="submit" value="Confirm">
+        <button class="submit-btn" type="button">Confirm</button>
       </div>
 
     </form>
@@ -425,6 +651,7 @@
       showcvc[0].innerHTML = cvcno.value;
       
     })
+    
     function validateform() {
     if(elementcvc.length==3){
       returnvalue5 = true;
@@ -439,14 +666,46 @@
       console.log(returnvalue5);
       if (returnvalue1 === true && returnvalue2 === true && returnvalue3 === true && returnvalue4 === true && returnvalue5 === true) {
         console.log("inside")
+        
         return true;
       } else {
+        submit = 0;
         return false;
       }
-
-
-
     }
+    
+    let submit = document.querySelector(".submit-btn");
+    submit.addEventListener('click',()=>{
+      if(validateform()===true){
+        document.querySelector(".thankyou").style.display = "flex";
+        let confirm = document.querySelector('.confirm');
+        confirm.addEventListener('click',()=>{
+        let myform = document.querySelector(".card-detail-form");
+        myform.submit();
+      })
+      }else{
+        document.querySelector(".thankyou").style.display = "none";
+      }
+    })
+    
+      // const target = document.querySelector(".form");
+      // function loadscript(){
+      //   fetch(`thankyou.html`)
+      //   .then(res =>{
+      //     return res.innerHTML;
+      //   })
+      //   .then(thankyou =>{
+      //     target.innerHTML = thankyou.html;
+      //   })
+      // }
+      
+
+    
+    // let form = document.querySelector(".card-detail-form")
+    // form.addEventListener('submit',function(event){
+    //   event.preventDefault();
+    //   window.location.href = 'thankyou.html';
+    // })
   </script>
 </body>
 
